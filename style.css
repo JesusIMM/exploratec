@@ -17,6 +17,9 @@ body {
   text-align: center;
   width: 100%;
   max-width: 350px;
+  /* Permite que el contenedor crezca si el panel se abre */
+  max-height: 90vh; 
+  overflow-y: auto; 
 }
 
 h1 {
@@ -39,20 +42,48 @@ h1 {
   font-weight: bold;
 }
 
-.btn.on {
-  background-color: #28a745; /* Verde (encendido) */
+.btn.on { background-color: #28a745; } /* Verde */
+.btn-warning { background-color: #ffc107; color: #212529; }
+.btn-warning.active-warning { background-color: #e0a800; box-shadow: inset 0 3px 5px rgba(0,0,0,0.125); }
+.btn-secondary { background-color: #6c757d; font-size: 15px; padding: 10px; margin-top: 10px;}
+.btn:hover { opacity: 0.9; }
+
+/* Estilos del Panel de Historial */
+.panel {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-top: 15px;
+  padding: 15px;
+  text-align: left;
 }
 
-.btn-warning {
-  background-color: #ffc107; /* Amarillo */
-  color: #212529;
+.panel h3 {
+  font-size: 16px;
+  margin-top: 0;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 5px;
 }
 
-.btn-warning.active-warning {
-  background-color: #e0a800; /* Amarillo oscuro al activar */
-  box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+.oculto {
+  display: none;
 }
 
-.btn:hover {
-  opacity: 0.9;
+#lista-historial {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto; /* Scroll interno si hay muchos registros */
 }
+
+#lista-historial li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 14px;
+  color: #495057;
+}
+
+.txt-on { color: #28a745; font-weight: bold; }
+.txt-off { color: #dc3545; font-weight: bold; }
