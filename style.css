@@ -1,0 +1,61 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.status-box {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #e9ecef;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.distancia {
+  color: #007bff;
+}
+
+/* Estilos del botón */
+.btn {
+  background-color: #dc3545; /* Rojo por defecto (apagado) */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn.on {
+  background-color: #28a745; /* Verde cuando está encendido */
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
