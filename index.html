@@ -14,9 +14,21 @@
 
   <div class="container">
     <h1>Control de Luz IoT</h1>
+    
     <button id="btn-luz" class="btn">Cargando...</button>
     <br><br>
     <button id="btn-intermitente" class="btn btn-warning">Modo Intermitente</button>
+    <br><br>
+    
+    <!-- Nuevo botón y panel de historial -->
+    <button id="btn-toggle-historial" class="btn btn-secondary">Ver Historial ⬇</button>
+    
+    <div id="panel-historial" class="panel oculto">
+      <h3>Últimos movimientos</h3>
+      <ul id="lista-historial">
+        <!-- Los registros aparecerán aquí automáticamente -->
+      </ul>
+    </div>
   </div>
 
   <script src="app.js"></script>
