@@ -50,10 +50,10 @@ btnIntermitente.addEventListener("click", () => {
     btnIntermitente.textContent = "Intermitente: ACTIVADO";
     btnIntermitente.classList.add("active-warning");
     
-    // Inicia un bucle que cambia el estado cada 1 segundo (1000 milisegundos)
+// Inicia un bucle que cambia el estado cada medio segundo (500 ms)
     intervaloIntermitente = setInterval(() => {
       db.ref("/Luz/estado").set(!estadoActual);
-    }, 1000);
+    }, 500);
     
   } else {
     detenerIntermitente();
